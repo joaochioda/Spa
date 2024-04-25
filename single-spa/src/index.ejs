@@ -11,20 +11,21 @@
   <script type="systemjs-importmap">
     {
       "imports": {
+        "@mc/root-config": "//localhost:3001/mc-root-config.js",
         "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.5.5/lib/system/single-spa.min.js",
         "react": "https://unpkg.com/react@16/umd/react.production.min.js",
+        
+        "@mc/react-route": "//localhost:8081/mc-react-route.js",
+        "@mc/react-parcel": "//localhost:8082/mc-react-parcel.js",
+        "@mc/react-header": "//localhost:8080/mc-react-header.js",
+        "@mc/utils": "//localhost:8083/mc-utils.js",
+        
         "react-dom": "https://unpkg.com/react-dom@16/umd/react-dom.production.min.js",
         "react-router-dom": "https://unpkg.com/react-router-dom@5.2.0/umd/react-router-dom.min.js"
       }
     }
   </script>
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.5.5/lib/system/single-spa.min.js" as="script">
-
-  <% if (isLocal) { %>
-  <script type="systemjs-importmap" src="https://video-implementando-micro-front-end-react-single-spa.nyc3.digitaloceanspaces.com/importmap.development.json"></script>
-  <% } else { %>
-    <script type="systemjs-importmap" src="https://video-implementando-micro-front-end-react-single-spa.nyc3.digitaloceanspaces.com/importmap.production.json"></script>
-  <% } %>
 
   <% if (isLocal) { %>
   <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@1.16.0/dist/import-map-overrides.js"></script>
